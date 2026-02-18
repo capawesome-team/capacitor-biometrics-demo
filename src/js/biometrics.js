@@ -14,6 +14,7 @@ export async function requireBiometricAuth() {
     return;
   }
 
+  // Check if biometric authentication is available on the device
   const { isAvailable } = await Biometrics.isAvailable();
   if (!isAvailable) {
     const error = new Error(
@@ -46,10 +47,9 @@ export async function requireBiometricAuth() {
       subtitle: 'Please authenticate to access the app',
       cancelButtonText: 'Cancel',
       iosFallbackButtonText: 'Use Passcode',
-      allowDeviceCredential: true,
+      allowDeviceCredential: true, // lets users fall back to their device PIN or password if biometrics are unavailable
     });
   } catch (error) {
-    console.error(getBiometricErrorMessage(error.code));
     throw error;
   }
 }

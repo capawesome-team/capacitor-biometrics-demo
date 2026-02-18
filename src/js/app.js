@@ -1,8 +1,3 @@
-/**
- * App entry: shows lock screen on native (Face ID), then home.
- * For beginners: one custom element, two views, simple flow.
- */
-
 import { SplashScreen } from '@capacitor/splash-screen';
 import { Capacitor } from '@capacitor/core';
 import {
