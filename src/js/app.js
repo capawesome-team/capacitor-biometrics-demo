@@ -4,10 +4,10 @@
  */
 
 import { SplashScreen } from '@capacitor/splash-screen';
+import { Capacitor } from '@capacitor/core';
 import {
   requireBiometricAuth,
   getBiometricErrorMessage,
-  isNativePlatform,
 } from './biometrics.js';
 import { LOCK_ICON } from './icons.js';
 
@@ -53,22 +53,21 @@ customElements.define(
   class extends HTMLElement {
     constructor() {
       super();
-
-      if (isNativePlatform()) {
+      if (Capacitor.isNativePlatform()) {
+        // On native we show the lock screen.
         this.innerHTML = getLockScreenHTML('', 'Log in');
         SplashScreen.hide();
         this.querySelector('#auth-btn').addEventListener('click', () =>
           this.authenticate(),
         );
       } else {
+        // On web we go straight to the home screen, no lock screen.
         this.showHome();
         SplashScreen.hide();
       }
     }
 
     async authenticate() {
-      if (!isNativePlatform()) return;
-
       try {
         await requireBiometricAuth();
         this.showHome();
