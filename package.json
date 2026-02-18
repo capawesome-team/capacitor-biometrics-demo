@@ -1,0 +1,28 @@
+{
+  "name": "capawesome-biometrics-demo",
+  "version": "1.0.0",
+  "description": "Capawesome Biometrics Demo App",
+  "main": "index.js",
+  "keywords": [
+    "capacitor",
+    "mobile"
+  ],
+  "scripts": {
+    "start": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@capacitor/android": "^8.0.2",
+    "@capacitor/core": "latest",
+    "@capacitor/ios": "^8.0.2",
+    "@capacitor/splash-screen": "latest",
+    "@capawesome-team/capacitor-biometrics": "^0.5.1"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "latest",
+    "vite": "^7.3.1"
+  },
+  "author": "Capawesome Team",
+  "license": "ISC"
+}

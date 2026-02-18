@@ -1,0 +1,171 @@
+/*
+ * All app styles in one file.
+ * Reusable classes: .btn, .card, .section-title, .text-muted, .link
+ */
+
+/* --- Variables (reuse these) --- */
+:root {
+  --color-bg: #f8fafc;
+  --color-text: #1e293b;
+  --color-text-muted: #64748b;
+  --color-accent: #4f46e5;
+  --color-border: #e2e8f0;
+  --color-dark-bg: #0f0f0f;
+  --color-dark-text: #fafafa;
+  --color-header-bg: #1e1b4b;
+  --radius: 12px;
+  --space: 20px;
+}
+
+/* --- Base --- */
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  min-height: 100dvh;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--color-text);
+  background: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+app-root {
+  display: block;
+  min-height: 100%;
+  min-height: 100dvh;
+}
+
+/* --- Reusable: button --- */
+.btn {
+  display: inline-block;
+  padding: 14px 28px;
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  text-align: center;
+  transition: opacity 0.2s, transform 0.15s;
+}
+.btn:hover { opacity: 0.9; }
+.btn:active { transform: scale(0.98); }
+.btn--primary {
+  color: var(--color-dark-bg);
+  background: #fff;
+}
+
+/* --- Reusable: card --- */
+.card {
+  background: #fff;
+  border-radius: var(--radius);
+  padding: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+.card p { margin: 0; font-size: 0.9375rem; line-height: 1.5; }
+
+/* --- Reusable: section title --- */
+.section-title {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-text-muted);
+  margin: 0 0 10px;
+}
+
+/* --- Reusable: muted text --- */
+.text-muted { color: var(--color-text-muted); }
+
+/* --- Reusable: link --- */
+.link {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+.link:hover { text-decoration: underline; }
+.link-block {
+  display: block;
+  padding: 14px 0;
+  font-size: 0.9375rem;
+  color: var(--color-text);
+  text-decoration: none;
+  border-bottom: 1px solid var(--color-border);
+}
+.link-block:last-child { border-bottom: none; }
+.link-block:hover { color: var(--color-accent); }
+
+/* --- Lock screen --- */
+.lock-screen {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  padding-top: max(env(safe-area-inset-top), 24px);
+  padding-bottom: max(env(safe-area-inset-bottom), 24px);
+  background: var(--color-dark-bg);
+  color: var(--color-dark-text);
+  text-align: center;
+  box-sizing: border-box;
+}
+.lock-screen__icon {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 32px;
+  color: rgba(255, 255, 255, 0.9);
+}
+.lock-screen__title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0 0 8px;
+}
+.lock-screen__hint {
+  font-size: 0.9375rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0 0 32px;
+  max-width: 260px;
+}
+.lock-screen__error {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0 0 24px;
+  max-width: 280px;
+}
+
+/* --- Home: header --- */
+.header {
+  padding: 16px var(--space);
+  padding-top: max(env(safe-area-inset-top), 16px);
+  text-align: center;
+  background: var(--color-header-bg);
+  color: #fff;
+}
+.header h1 {
+  margin: 0;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+/* --- Home: main content --- */
+.home {
+  padding: 24px var(--space);
+  padding-bottom: max(env(safe-area-inset-bottom), 24px);
+  min-height: 100%;
+  box-sizing: border-box;
+}
+.home__hero { margin-bottom: 28px; }
+.home__greeting {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  margin: 0 0 4px;
+}
+.home__tagline {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+  color: var(--color-text);
+}
+.home__section { margin-bottom: 24px; }

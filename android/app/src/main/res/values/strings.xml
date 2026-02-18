@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Capawesome Biometrics Demo</string>
+    <string name="title_activity_main">Capawesome Biometrics Demo</string>
+    <string name="package_name">com.capawesome.biometrics.app</string>
+    <string name="custom_url_scheme">com.capawesome.biometrics.app</string>
+</resources>

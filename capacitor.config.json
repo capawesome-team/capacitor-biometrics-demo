@@ -1,0 +1,11 @@
+{
+  "appId": "com.capawesome.biometrics.app",
+  "appName": "Capawesome Biometrics Demo",
+  "bundledWebRuntime": false,
+  "webDir": "dist",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  }
+}
