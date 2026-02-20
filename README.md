@@ -1,14 +1,44 @@
-## Created with Capacitor Create App
+# Add Biometrics Authentication to your Capacitor App
+This repository contains a minimal demo app showcasing how to implement Biometric authentication in a Capacitor application using the Capawesome Biometrics plugin.
 
-This app was created using [`@capacitor/create-app`](https://github.com/ionic-team/create-capacitor-app),
-and comes with a very minimal shell for building an app.
+ - [Biometrics Plugin Documentation](https://capawesome.io/plugins/biometrics/)
+ - [Video Tutorial](https://youtu.be/ixUvTX6n7x8)
 
-### Running this example
+
+The demo is intentionally framework-agnostic and built with:
+- Capacitor
+- Vanilla JavaScript
+- A minimal UI focused on the authentication flow
+
+## Demo
+https://github.com/user-attachments/assets/97ac6a73-424e-4181-90f8-2661e6e3a7e6
+
+
+## Running this example
+
+Install the project dependencies 
+
+```bash
+npm install
+```
 
 To run the provided example, you can use `npm start` command.
 
 ```bash
 npm start
+```
+
+### Adding Capawesome Biometrics Plugin
+The Biometrics plugin is part of the Capawesome Insiders program. [Get access to premium Capacitor plugins](https://capawesome.io/insiders/).
+
+```bash
+npm config set @capawesome-team:registry https://npm.registry.capawesome.io
+npm config set //npm.registry.capawesome.io/:_authToken <YOUR_LICENSE_KEY>
+
+# Replace <YOUR_LICENSE_KEY> with the license key you received when joining the Insiders program https://capawesome.io/insiders/
+
+npm install @capawesome-team/capacitor-biometrics
+npx cap sync
 ```
 
 ### Capacitor Development Workflow
@@ -29,13 +59,9 @@ Sync command will copy over your already built web bundle to both your Android a
 
 For more info read [Capacitor docs](https://capacitorjs.com/docs/basics/workflow)
 
-### Adding Capawesome Biometrics Plugin
-```bash
-npm config set @capawesome-team:registry https://npm.registry.capawesome.io
-npm config set //npm.registry.capawesome.io/:_authToken <YOUR_LICENSE_KEY>
+## About Capawesome
 
-# Replace <YOUR_LICENSE_KEY> with the license key you received when joining the Insiders program https://capawesome.io/insiders/
+Capawesome builds professional, production-ready plugins and tools for Capacitor developers.
+Our mission is to make modern mobile app development easier, faster, and more reliable — without workarounds or hacks.
 
-npm install @capawesome-team/capacitor-biometrics
-npx cap sync
-```
+Learn more at 👉 https://capawesome.io
