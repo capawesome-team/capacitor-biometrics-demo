@@ -17,7 +17,7 @@
     "@capacitor/core": "latest",
     "@capacitor/ios": "^8.0.2",
     "@capacitor/splash-screen": "latest",
-    "@capawesome-team/capacitor-biometrics": "^0.5.1"
+    "@capawesome-team/capacitor-biometrics": "^0.5.2"
   },
   "devDependencies": {
     "@capacitor/cli": "latest",
